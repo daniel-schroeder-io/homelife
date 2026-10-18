@@ -1,0 +1,69 @@
+:root {
+  --text: #3d4450;
+  --text-h: #12161c;
+  --bg: #eef2f6;
+  --bg-elevated: #f8fafc;
+  --border: #c8d0db;
+  --accent: #1f6b5a;
+  --ok: #1f6b5a;
+  --danger: #b42318;
+  --sans: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #d7e8e2 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, #d9e2ef 0%, transparent 50%),
+    var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #a8b0bc;
+    --text-h: #f0f3f7;
+    --bg: #10141a;
+    --bg-elevated: #171c24;
+    --border: #2a3340;
+    --accent: #5fbfa8;
+    --ok: #5fbfa8;
+    --danger: #f97066;
+    background:
+      radial-gradient(ellipse 70% 45% at 0% 0%, #1a2e29 0%, transparent 55%),
+      radial-gradient(ellipse 50% 35% at 100% 10%, #1a2433 0%, transparent 50%),
+      var(--bg);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100svh;
+  min-height: 100dvh;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-inline: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-elevated) 88%, transparent);
+  padding-top: env(safe-area-inset-top, 0px);
+}
